@@ -3,7 +3,7 @@
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Input } from "@/components/ui/8bit/input";
+import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 
 const formSchema = z.object({
