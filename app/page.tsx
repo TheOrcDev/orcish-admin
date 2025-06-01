@@ -11,15 +11,15 @@ import {
   Users,
 } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/8bit/badge";
+import { Button } from "@/components/ui/8bit/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/8bit/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,8 +27,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+} from "@/components/ui/8bit/dropdown-menu";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/8bit/sheet";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import Orders from "@/components/features/orders";
 import AdminSearch from "@/components/features/admin-search";
@@ -43,8 +43,8 @@ export default function Dashboard() {
               <Package2 className="h-6 w-6" />
               <span className="">Acme Inc</span>
             </Link>
-            <Button variant="outline" size="icon" className="ml-auto h-8 w-8">
-              <Bell className="h-4 w-4" />
+            <Button variant="outline" size="icon" className="ml-auto">
+              <Bell className="size-4" />
               <span className="sr-only">Toggle notifications</span>
             </Button>
           </div>
@@ -54,38 +54,36 @@ export default function Dashboard() {
                 href="#"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
               >
-                <Home className="h-4 w-4" />
+                <Home className="size-4" />
                 Dashboard
               </Link>
               <Link
                 href="#"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
               >
-                <ShoppingCart className="h-4 w-4" />
+                <ShoppingCart className="size-4" />
                 Orders
-                <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
-                  6
-                </Badge>
+                <Badge className="ml-auto flex ">6</Badge>
               </Link>
               <Link
                 href="#"
                 className="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary"
               >
-                <Package className="h-4 w-4" />
+                <Package className="size-4" />
                 Products{" "}
               </Link>
               <Link
                 href="#"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
               >
-                <Users className="h-4 w-4" />
+                <Users className="size-4" />
                 Customers
               </Link>
               <Link
                 href="#"
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
               >
-                <LineChart className="h-4 w-4" />
+                <LineChart className="size-4" />
                 Analytics
               </Link>
             </nav>
@@ -122,7 +120,7 @@ export default function Dashboard() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="flex flex-col">
-              <nav className="grid gap-2 text-lg font-medium">
+              <nav className="grid gap-2 text-lg font-medium p-5">
                 <Link
                   href="#"
                   className="flex items-center gap-2 text-lg font-semibold"
@@ -143,9 +141,7 @@ export default function Dashboard() {
                 >
                   <ShoppingCart className="h-5 w-5" />
                   Orders
-                  <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
-                    6
-                  </Badge>
+                  <Badge className="ml-auto flex">6</Badge>
                 </Link>
                 <Link
                   href="#"
@@ -169,7 +165,7 @@ export default function Dashboard() {
                   Analytics
                 </Link>
               </nav>
-              <div className="mt-auto">
+              <div className="mt-auto px-5">
                 <Card>
                   <CardHeader>
                     <CardTitle>Upgrade to Pro</CardTitle>
@@ -193,8 +189,8 @@ export default function Dashboard() {
           <ModeToggle />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="secondary" size="icon" className="rounded-full">
-                <CircleUser className="h-5 w-5" />
+              <Button variant="outline" size="icon">
+                <CircleUser className="size-4" />
                 <span className="sr-only">Toggle user menu</span>
               </Button>
             </DropdownMenuTrigger>

@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/8bit/card";
 import {
   Table,
   TableBody,
@@ -13,7 +13,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/components/ui/8bit/table";
 
 export default function Orders() {
   return (
@@ -23,7 +23,7 @@ export default function Orders() {
         <CardDescription>Recent orders from your store.</CardDescription>
       </CardHeader>
       <CardContent>
-        <Table>
+        <Table variant="borderless">
           <TableHeader>
             <TableRow>
               <TableHead>Customer</TableHead>
